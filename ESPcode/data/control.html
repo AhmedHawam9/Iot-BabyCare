@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Controller</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/v4-shims.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logobabycray.png" type="image/gif" sizes="16x16">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+        body {
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/b7/Back21581.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .header h1 {
+            font-family: "4 Star Face Font Regular";
+        }
+        
+        .camera {
+            border: 3px solid white;
+            box-shadow: 5px 10px 18px #888888;
+            height: 500px;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .camera iframe {
+            height: 495px;
+            margin: 0;
+            position: relative;
+            border: none;
+            transform: scale(1.3);
+            margin-top: -50px;
+        }
+        
+        .shake {
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            font-size: xx-large;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+        }
+        
+        .chooseshake button {
+            cursor: pointer;
+        }
+        
+        .datahead h2 {
+            font-family: "Arial Black", Gadget, sans-serif;
+            text-shadow: 4px 4px 8px #eeeeee;
+        }
+        
+        .data h4 {
+            text-shadow: 2px 2px 4px #ffffff;
+            margin-top: 1em;
+        }
+        
+        #hubble-container {
+            width: 50%;
+            font-size: 0;
+            border: 1px solid #111;
+            overflow: hidden;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+        
+        #hubblepic {
+            width: 100%;
+        }
+        
+        #zoomer {
+            display: block;
+            width: 50%;
+            margin: 2rem auto;
+        }
+        
+        @media all and (max-width: 500px) {
+            #zoomer,
+            #hubble-container {
+                width: 85%;
+            }
+        }
+        
+         :root {
+            /* TIP: use same color to disable gradient */
+            --slider-fill-color1: rgba(247, 4, 32, 0.87);
+            --slider-fill-color2: rgb(0, 9, 242);
+            --slider-background: rgba(255, 255, 255, 0.3);
+            --thumb-size: 8px;
+            --thumb-color: rgba(0, 36, 157, 0.88);
+            --bar-height: 1px;
+            /* add more clickable area to trigger
+         INFO: use 'none' to disable  */
+            --slider-border: 10px solid transparent;
+        }
+        /*********** Generic styles ***********/
+        
+        input[type='range']::-webkit-slider-runnable-track,
+        input[type='range']::-webkit-slider-thumb,
+        input[type='range'] {
+            -webkit-appearance: none;
+        }
+        
+        input[type='range'] {
+            width: 100%;
+            background-clip: content-box;
+            margin: 0;
+        }
+        
+        input[type='range']:focus {
+            outline: none;
+        }
+        /* END Generic styles */
+        
+        input[type='range'] {
+            background-color: var(--slider-background);
+            border-top: var(--slider-border);
+            border-bottom: var(--slider-border);
+        }
+        
+        input[type='range']::-webkit-slider-runnable-track {
+            height: var(--bar-height);
+            border-radius: 0;
+            background: linear-gradient(90deg, var(--slider-fill-color1), var(--slider-fill-color2)) 0 100% no-repeat content-box;
+        }
+        
+        input[type='range']::-webkit-slider-thumb {
+            width: var(--thumb-size);
+            height: var(--thumb-size);
+            /* round button */
+            border-radius: 50%;
+            transform: translateY( calc( var(--bar-height) - var(--thumb-size) / 2));
+            background-color: var(--thumb-color);
+            border: none;
+        }
+        /* hover style */
+        
+        input[type='range']:hover {
+            filter: brightness(150%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row header d-flex justify-content-center col-lg-12 col-md-12 col-sm-12 pt-3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Logo2fbhdd.png" width="70px">
+            <h1 class="pr-3 pl-3 display-3">Baby cry system control</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Logo2fbhdd.png" width="70px">
+        </div>
+        <!-- Start camera -->
+        <div class="row mt-5">
+            <div class="col-lg-3"></div>
+            <div id="hubble-container" class="camera col-lg-6 col-md-6 col-sm-12">
+                <iframe id="hubblepic" src="http://192.168.43.1:6677/" allowfullscreen="true" scrolling="no" width="755px"></iframe>
+                <!-- <iframe class="col-lg-12 col-md-12 col-sm-12" src="http://192.168.1.4:4747/" allowfullscreen="true" scrolling="no"></iframe> -->
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <input type="range" min="1.3" max="4" value="1" step="0.1" id="zoomer" oninput="deepdive()">
+            </div>
+        </div>
+        <!-- End camera -->
+        <!-- Start light -->
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="shake mt-5">
+                <p>Do you want to turn on the lights in the room?</p>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="chooseshake">
+                <button onclick="location.href='/light/on'" class="btn-info btn-lg mr-5">Turn On</button>
+                <button onclick="location.href='/light/off'" class="btn-danger btn-lg ml-4">Turn Off</button>
+            </div>
+        </div>
+        <!-- End light -->
+        <!-- Start shake -->
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="shake mt-5">
+                <p>Would you like to shake your baby?</p>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="chooseshake">
+                <button onclick="location.href='/shake/on'" class="btn-info btn-lg mr-5">Shake</button>
+                <button onclick="location.href='/shake/off'" class="btn-danger btn-lg ml-4">Calm</button>
+            </div>
+        </div>
+        <!-- End shake -->
+        <!--Start data -->
+        <div class="row datahead mt-5 ml-3">
+            <h2>Data on the child</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col data">
+                <h4 id="cry">Your baby's crying state : </h4>
+                <h4 id="temp">Your child's temperature : </h4>
+                <h4 id="heart">Your child's heart rate : </h4>
+            </div>
+        </div>
+        <!--End data -->
+    </div>
+    <script>
+        var zoomer = document.getElementById('zoomer');
+        var hubblepic = document.getElementById('hubblepic');
+
+        function deepdive() {
+            zoomlevel = zoomer.valueAsNumber;
+            hubblepic.style.webkitTransform = "scale(" + zoomlevel + ")";
+            hubblepic.style.transform = "scale(" + zoomlevel + ")";
+        }
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
