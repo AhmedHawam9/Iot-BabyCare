@@ -22,9 +22,8 @@ DallasTemperature sensors(&oneWire);  // Pass our oneWire reference to Dallas Te
 //sending data to esp
 String message = "";
 bool messageReady = false;
-//Heart Beat
+//Heart Beat, Volatile Variables are used in the interrupt service routine!
 int beat = 0;
-// Volatile Variables, used in the interrupt service routine!
 volatile int BPM;                   // int that holds raw Analog in 0. updated every 2mS
 volatile int Signal;                // holds the incoming raw data
 volatile int IBI = 600;             // int that holds the time interval between beats! Must be seeded! 
@@ -67,16 +66,15 @@ void loop(void)
 void cryCheck()
 {
   unsigned long timeStamp = millis();
-  delay(100);
   while((millis() - timeStamp) < 5000){
     soundLevel = analogRead(soundPin);
     if(soundLevel > 44)
     {
-      digitalWrite(13, HIGH);
       cry = 1;
-      break;
+      return;
     }
   }
+  cry = 0;
 }
 /////Heart Beat////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void measureHeartBeat(){
@@ -208,7 +206,6 @@ void measureTemprature(){
 }
 
 /////Sending Data To ESP/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 void send2ESP(){
   while(Serial.available()) { // Monitor serial communication
     message = Serial.readString();
