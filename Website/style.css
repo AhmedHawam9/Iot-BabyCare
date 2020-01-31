@@ -1,0 +1,358 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    body {
+        overflow-x: hidden;
+        background-image: url(img/yy.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 110%;
+    }
+    
+    .bgimage {
+        /*filter: blur(8px);
+	-webkit-filter: blur(8px);*/
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .menu {
+        width: 100%;
+        height: 100px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .leftmenu {
+        width: 20%;
+        line-height: 100px;
+        float: left;
+        /*	background-color: yellow;*/
+    }
+    
+    .leftmenu h4 {
+        padding-left: 70px;
+        font-weight: bold;
+        color: white;
+        font-size: 22px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .rightmenu {
+        width: 70%;
+        height: 100px;
+        float: right;
+        /*	background-color: red; */
+    }
+    
+    .rightmenu ul {
+        margin-left: 400px;
+    }
+    
+    .rightmenu ul li {
+        font-family: 'Montserrat', sans-serif;
+        display: inline-block;
+        list-style: none;
+        font-size: 15px;
+        color: white;
+        font-weight: bold;
+        line-height: 100px;
+        margin-left: 40px;
+        text-transform: uppercase;
+    }
+    
+    #fisrtlist {
+        color: #50e4b0;
+    }
+    
+    .rightmenu ul a:hover {
+        color: #50e4b0;
+    }
+    
+    a {
+        color: white;
+    }
+    
+    .desc {
+        width: 35%;
+        text-align: justify;
+        margin-top: 20px;
+        line-height: 1.5;
+        color: black;
+        font-size: 20px;
+        margin: 8px;
+        text-shadow: 2px 2px 4px #ffff;
+    }
+    
+    .text {
+        margin-left: 35px;
+    }
+    
+    .text h1 {
+        margin-top: 90px;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+    }
+    
+    .team {
+        text-align: center;
+        color: #fff;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .id {
+        margin: 0 87px;
+    }
+    
+    div.gallery {
+        margin: 8px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 250px;
+    }
+    
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+    
+    div.gallery img {
+        width: 100%;
+        height: 190px;
+    }
+    
+    div.about {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .gallery {
+        background-color: #e8f6f6;
+        box-shadow: 5px 10px 18px #888888;
+    }
+    
+    #Asmaa,
+    #nada,
+    #diaa {
+        width: 200px;
+        padding-left: 23px;
+    }
+    
+    #omar {
+        height: 208px;
+        width: 208px;
+        padding-left: 20px;
+    }
+    
+    #mariam {
+        width: 190px;
+        padding-left: 29px;
+        /*height:208px;*/
+    }
+    
+    #ahmed {
+        width: 190px;
+        padding-left: 29px;
+    }
+    
+    #mutaz {
+        height: 208px;
+        width: 200px;
+        padding-left: 25px;
+    }
+    
+    #almekawy,
+    #mahmoud {
+        height: 208px;
+        width: 200px;
+        padding-left: 25px;
+    }
+    
+    #ma {
+        margin-left: 545px;
+    }
+    
+    #mohamed,
+    #amr {
+        height: 208px;
+        width: 208px;
+        padding-left: 20px;
+    }
+    
+    body {
+        font-family: Verdana, sans-serif;
+    }
+    
+    .mySlides {
+        display: none;
+    }
+    
+    img {
+        vertical-align: middle;
+    }
+    
+    .text2 {
+        color: whitesmoke;
+        font-size: 20px;
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
+    }
+    /* The dots/bullets/indicators */
+    
+    .dot {
+        height: 15px;
+        width: 15px;
+        /*margin: 0 2px;*/
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    
+    .active {
+        background-color: #717171;
+    }
+    /* Fading animation */
+    
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    .vedio {
+        padding-bottom: 20px;
+        margin-top: 50px;
+        padding-top: 50px;
+        color: #fff;
+    }
+    
+    #vo {
+        padding-bottom: 20px;
+        margin-top: -35px;
+    }
+    
+    #image {
+        /* background-color: papayawhip; */
+    }
+    
+    .proj {
+        margin-top: 63.6%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        color: white;
+        text-align: center;
+    }
+    
+    #image .slideshow-container img {
+        width: 100%;
+        height: 600px;
+    }
+    
+    .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin: 0 auto;
+    }
+    /*.avatar {
+	vertical-align: middle;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+  }*/
+    
+    .container {
+        text-align: center;
+        position: fixed;
+        z-index: 50;
+    }
+    
+    .button {
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        width: 150px;
+        float: left;
+        display: block;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 4px 2px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    
+    .button2 {
+        background-color: orange
+    }
+    
+    .button3 {
+        background-color: #f44336;
+    }
+    
+    a:link {
+        text-decoration: none;
+    }
+    
+    #mySidenav a {
+        position: fixed;
+        left: -80px;
+        transition: 0.3s;
+        padding: 15px;
+        margin-top: 420px;
+        width: 100px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        border-radius: 0 5px 5px 0;
+    }
+    
+    #mySidenav a:hover {
+        left: 0;
+    }
+    
+    #proposal {
+        top: 20px;
+        background-color: #555;
+    }
+    
+    #img {
+        top: 80px;
+        background-color: #2196F3;
+    }
+    
+    #video {
+        top: 140px;
+        background-color: #f44336;
+    }
+    
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    /* On smaller screens, decrease text size */
+    
+    @media only screen and (max-width: 300px) {
+        .text {
+            font-size: 11px
+        }
+    }

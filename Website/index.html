@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>baby care</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="bgimage">
+        <div class="menu">
+            <div class="leftmenu">
+                <h4>Baby Care</h4>
+            </div>
+            <div class="rightmenu">
+                <ul>
+                    <li id="fisrtlist"> HOME </li>
+                    <li><a href="#aboutus">About Us</a></li>
+                    <li><a href="#image">images</a></li>
+                    <li><a href="#vedios">videos</a></li>
+                    <li><a href="#Links">Links</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text">
+            <h1 id="id1"> Description:</h1>
+            <p class="desc">Baby care is an IOT based app for helping parents to take care of their babies by:
+                <br> Detecting the baby's cries and shake his/her bed , Sense temperature of the baby , Monitor the baby's data through website in addition to live camera to insure more security and monitoring
+            </p>
+        </div>
+    </div>
+    <!--------------------------About Us----------------------->
+    <div class="id">
+        <h1 class="team" id="aboutus">☺Team Members☺</h1>
+        <div class="gallery">
+            <img src="img\Asmaa.jpg" alt="Asmaa" id="Asmaa">
+            <div class="about">Asmaa Ibrahim<br>SWE - Level 4</div>
+        </div>
+        <div class="gallery">
+            <img src="img\nada.jpg" alt="nada" id="nada">
+            <div class="about">Nada Makram<br>SWE - Level 4</div>
+        </div>
+        <div class="gallery">
+            <img src="img\mariam.jpg" alt="mariam" id="mariam">
+            <div class="about">Mariam Ali<br>SWE - Level 4</div>
+        </div>
+        <div class="gallery">
+            <img src="img\diaa.jpg" alt="Diaa Magdy" id="diaa">
+            <div class="about">Diaa Magdy<br>SWE - Level 4</div>
+        </div>
+        <div class="gallery">
+            <img src="img\Ahmed.jpg" alt="Ahmed" id="ahmed">
+            <div class="about">Ahmed Hawam<br>SWE - Level 4</div>
+        </div>
+        <div class="gallery">
+            <img src="img\mutaz.jpg" alt="mutaz" id="mutaz">
+            <div class="about">Mohamed Mutaz<br>SWE - Level 4</div>
+        </div>
+        <div class="gallery">
+            <img src="img\Almakawy1.jpg" alt="almekawy" id="almekawy">
+            <div class="about">Mahmoud Almekawy<br>SWE - Level 4</div>
+        </div>
+        <div class="gallery">
+            <img src="img\amr.jpg" alt="Amr" id="amr">
+            <div class="about">Amr Osama<br>SWE - Level 4</div>
+        </div>
+        <div class="gallery">
+            <img src="img\mohamed.jpg" alt="Mohamed" id="mohamed">
+            <div class="about">Mohamed Elsaygh<br>SWE - Level 4</div>
+        </div>
+        <div class="gallery">
+            <img src="img\omar.jpg" alt="omar" id="omar">
+            <div class="about">Omar Elalfy<br>SWE - Level 4</div>
+        </div>
+        <div class="gallery" id="ma">
+            <img src="img\Mahmoud.jpg" alt="Mahmoud" id="mahmoud">
+            <div class="about">Mahmoud Reda<br>SWE - Level 4</div>
+        </div>
+    </div>
+    <!--
+<img src="tt.jpg" alt="Avatar" class="avatar">
+<img src="tt.jpg" alt="Avatar" class="avatar">
+<img src="tt.jpg" alt="Avatar" class="avatar">-->
+    <!----------------------Project Images-------------------------------->
+    <div id="image">
+        <h1 class="proj">Project Images</h1>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+
+                <img src="proj/finish.jpg" style="width:100%">
+                <div class="text2">Image One</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="proj/finish2.jpeg" style="width:100%">
+                <div class="text2">Image Two</div>
+            </div>
+            <div class="mySlides fade">
+
+                <img src="proj\proj1.jpg" style="width:100%">
+                <div class="text2">Image Three</div>
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="proj\proj2.jpg" style="width:100%">
+                <div class="text2">Image Four</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="proj\proj3.jpg" style="width:100%">
+                <div class="text2">Image Five</div>
+            </div>
+
+            <br>
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+    </script>
+    <!-----------------------Vedioes-------------------------------->
+    <div style="text-align:center" class="vedio" id="vedios">
+        <h1 id="vo">Project video</h1>
+        <video id="video1" width="650" height="400" controls>
+		  <source src="videos\finish.mp4" type="video/mp4">
+		</video>
+    </div>
+
+    <div class="container" id="Links">
+        <button class="button"><a href="https://drive.google.com/open?id=1cauj9rCuny7-BZifLwPKpNUEEBkloxYm" target="_blank">proposal</a></button><br><br><br><br>
+        <button class="button button2"><a href="https://drive.google.com/open?id=1SByNC2CBeNFBwusZaFKFDXSoAI2yKPWk" target="_blank">Images</a></button><br><br><br><br>
+        <button class="button button3"><a href="https://drive.google.com/open?id=1620_X7Ql3qOXLuOJ9ZxN0PZHlPmaxMBA"target="_blank">videos</a></button>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="https://drive.google.com/open?id=1cauj9rCuny7-BZifLwPKpNUEEBkloxYm" id="proposal">Proposal</a>
+        <a href="https://drive.google.com/open?id=1SByNC2CBeNFBwusZaFKFDXSoAI2yKPWk" id="img">Images</a>
+        <a href="https://drive.google.com/open?id=1620_X7Ql3qOXLuOJ9ZxN0PZHlPmaxMBA" id="video">videos</a>
+    </div>
+</body>
+
+</html>

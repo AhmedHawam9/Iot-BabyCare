@@ -28,7 +28,7 @@ volatile int BPM;                   // int that holds raw Analog in 0. updated e
 volatile int Signal;                // holds the incoming raw data
 volatile int IBI = 600;             // int that holds the time interval between beats! Must be seeded! 
 volatile boolean Pulse = false;     // "True" when User's live heartbeat is detected. "False" when not a "live beat". 
-volatile boolean QS = false;        // becomes true when Arduoino finds a beat.
+volatile boolean QS = false;        // becomes true when Arduino finds a beat.
 volatile int rate[10];                      // array to hold last ten IBI values
 volatile unsigned long sampleCounter = 0;          // used to determine pulse timing
 volatile unsigned long lastBeatTime = 0;           // used to find IBI
@@ -114,12 +114,12 @@ void arduinoSerialMonitorVisual(char symbol, int data)
 
 ISR(TIMER2_COMPA_vect) //triggered when Timer2 counts to 124
 {  
-  cli();                                      // disable interrupts while we do this
+  cli();                                    // disable interrupts while we do this
   Signal = analogRead(pulsePin);              // read the Pulse Sensor 
   sampleCounter += 2;                         // keep track of the time in mS with this variable
   int N = sampleCounter - lastBeatTime;       // monitor the time since the last beat to avoid noise
                                               //  find the peak and trough of the pulse wave
-  if(Signal < thresh && N > (IBI/5)*3) // avoid dichrotic noise by waiting 3/5 of last IBI
+  if(Signal < thresh && N > (IBI/5)*3) // avoid di-chrotic noise by waiting 3/5 of last IBI
     {      
       if (Signal < T) // T is the trough
       {                        

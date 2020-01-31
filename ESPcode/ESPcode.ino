@@ -20,14 +20,14 @@ unsigned long stopTimeStamp;
 //Arduino communication
 DynamicJsonDocument doc(1024);
 //Wifi connection
-const char* ssid     = "vast";
-const char* password = "detach33ed";
+//const char* ssid     = "vast";
+//const char* password = "detach33ed";
+const char* ssid     = "7W7w98";
+const char* password = "ahmed271998271998";
 //Sensor values
 String cryState = "quit good baby";
 int temprature = 0;
 int heartRate = 0;
-//const char* ssid     = "7W7w98";
-//const char* password = "ahmed271998271998";
 //Webserver
 WiFiServer server(80);  // Set web server port number to 80
 String header;
