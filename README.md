@@ -1,4 +1,6 @@
 # <center> Baby Care </center>
+## Demo
+    - Please check the video we made about the project here: https://m.youtube.com/watch?v=ymee8DEb5Fk&feature=youtu.be
 ## How To Run:
     1. Upload the arduino code into Arduino
     2. Upload the ESP code into ESP8266
@@ -13,15 +15,15 @@
     - Measuring the heartbeat of the baby
 
 ## Names And Emails
-    1.	DiaaEldin Magdi Amin - DiaaAbdElmaksoud@hotmail.com
-    2.	Mohamed Reda Elsaygh - moelsaygh7@gmail.com 
-    3.	Asmaa Ibrahim Mahfouz - ai782273@gmail.com 
-    4.	Amr Osama Zakzouk - amro.osama159@gmail.com 
-    5.	Ahmed Hamdy Hawam - ahmed.hawam2030@gmail.com
-    6.	Mohammed Moataz Atef - mohamedmoataz12@gmail.com 
-    7.	Mahmoud Reda Abd-Elhady - Mahmoud.reda84@yahoo.com
-    8.	Nada Makram Mokhtar - nadamakram42@gmail.com 
-    9.	Mariam Ali Eldoweny - mariam.eldoweny.2016@gmail.com
+    1. DiaaEldin Magdi Amin - DiaaAbdElmaksoud@hotmail.com
+    2. Mohamed Reda Elsaygh - moelsaygh7@gmail.com 
+    3. Asmaa Ibrahim Mahfouz - ai782273@gmail.com 
+    4. Amr Osama Zakzouk - amro.osama159@gmail.com 
+    5. Ahmed Hamdy Hawam - ahmed.hawam2030@gmail.com
+    6. Mohammed Moataz Atef - mohamedmoataz12@gmail.com 
+    7. Mahmoud Reda Abd-Elhady - Mahmoud.reda84@yahoo.com
+    8. Nada Makram Mokhtar - nadamakram42@gmail.com 
+    9. Mariam Ali Eldoweny - mariam.eldoweny.2016@gmail.com
     10. Omar Ahmed El-Alfy - asdasdasd3.as@gmail.com
     11. Mahmoud Maher Al-Mekkawy - Mahmoudalmakawy@gmail.com
 ## Libraries Used:
